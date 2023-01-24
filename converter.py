@@ -18,15 +18,20 @@ def conversor():
                 print(f'{centimeters} metros')
 
             opt_message = int(input('Se deseja fazer outra operação digite 1, se deseja sair digite 2: ')) 
-            if opt_message == 2:
+
+            def exit():
+                 global exit
                  exit = True
+                 print("Até a próxima!")
+
+            if opt_message == 2:
+                 exit()
             elif 0 <= opt_message > 2:
                  print("Opção inválida, tente novamente")
             elif opt_message == 1:
                 conversor()
             elif opt_message == 2:
-                exit = True
-                print("Até a próxima!")
+                exit()
 
 
 
